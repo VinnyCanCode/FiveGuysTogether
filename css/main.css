@@ -1,0 +1,480 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; }
+
+body {
+  background: white;
+  font-family: 'Roboto Condensed', 'Roboto', sans-serif; }
+  body #fullBody {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-auto-columns: 1fr 1fr; }
+    body #fullBody .firstHalf {
+      grid-column: 1; }
+      body #fullBody .firstHalf .firstHalfContainer {
+        width: 100%;
+        height: 100vh; }
+        body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+          background: #cf092b;
+          color: white;
+          width: 18%;
+          height: 15vh;
+          font-size: 2.7rem;
+          font-weight: 900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          font-family: 'Playfair Display';
+          animation-name: colorFadeIn;
+          animation-duration: 3s;
+          animation-delay: .5s;
+          animation-iteration-count: 1; }
+
+@keyframes colorFadeIn {
+  from {
+    width: 0%; }
+  to {
+    width: 18%; } }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer {
+          width: 100%;
+          height: 68vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+            text-align: left;
+            font-size: 5rem;
+            color: #cf092b;
+            animation-name: centerWordsFadeIn;
+            animation-duration: 3s;
+            animation-delay: .5s;
+            animation-iteration-count: 1; }
+
+@keyframes centerWordsFadeIn {
+  from {
+    font-size: 0rem; }
+  to {
+    font-size: 5rem; } }
+          body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords p {
+            font-size: 1.3rem; }
+          body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+            font-size: 1.5rem;
+            font-weight: 500;
+            background: white;
+            color: #cf092b;
+            border: 3px solid #cf092b;
+            width: 11rem;
+            padding: 1rem;
+            border-radius: 35px;
+            outline: none; }
+    body #fullBody .secondHalf {
+      grid-column: 2;
+      background: url("../imgs/fiveGuysMainPic.jpeg") 5% 100%/cover no-repeat;
+      width: 100%;
+      height: 100vh; }
+      body #fullBody .secondHalf header {
+        height: 15vh;
+        background: #cf092b;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        animation-name: colorFadeInHeader;
+        animation-duration: 3s;
+        animation-delay: .5s;
+        animation-iteration-count: 1; }
+
+@keyframes colorFadeInHeader {
+  from {
+    width: 0%; }
+  to {
+    width: 100%; } }
+        body #fullBody .secondHalf header nav {
+          color: white;
+          animation-name: headerItems;
+          animation-duration: 4s;
+          animation-delay: .5s;
+          animation-iteration-count: 1; }
+
+@keyframes headerItems {
+  from {
+    opacity: -2; }
+  to {
+    opacity: 10; } }
+          body #fullBody .secondHalf header nav ul {
+            list-style: none;
+            display: flex;
+            flex-direction: row; }
+            body #fullBody .secondHalf header nav ul li {
+              margin-right: 3.5rem;
+              font-size: 1.1rem; }
+              body #fullBody .secondHalf header nav ul li .socialMedia {
+                width: 1rem;
+                height: 1rem; }
+    body #fullBody .bottomNav {
+      width: 100%;
+      height: 100vh;
+      display: flex;
+      position: absolute;
+      justify-content: center;
+      align-items: flex-end;
+      padding-bottom: 2rem; }
+      body #fullBody .bottomNav .navContainer {
+        border-radius: 35px;
+        box-shadow: -3px 3px 10px darkgrey;
+        width: 80%;
+        height: 10%;
+        padding: 1rem;
+        display: flex;
+        z-index: 3;
+        background: white; }
+        body #fullBody .bottomNav .navContainer ul {
+          width: 100%;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between; }
+          body #fullBody .bottomNav .navContainer ul li {
+            list-style: none;
+            font-size: 1.3rem; }
+            body #fullBody .bottomNav .navContainer ul li img {
+              margin-right: -5rem; }
+            body #fullBody .bottomNav .navContainer ul li button {
+              background: #cf092b;
+              font-size: 1.1rem;
+              color: white;
+              border: 3px solid #cf092b;
+              width: 20vh;
+              height: 8vh;
+              padding: .5rem;
+              border-radius: 35px;
+              outline: none; }
+
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+    font-size: 2rem; }
+  body .secondHalf header nav {
+    margin-left: 1rem; }
+  body .bottomNav .navContainer ul li img {
+    width: 3rem; } }
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: portrait) {
+  body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+    font-size: 1.5rem;
+    width: 30%; }
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+    font-size: 1rem;
+    padding: .7rem; }
+  body #fullBody .secondHalf {
+    background: url("../imgs/fiveGuysMainPic.jpeg") 30%/120% 100% no-repeat; }
+    body #fullBody .secondHalf header nav {
+      margin-left: 1rem; }
+      body #fullBody .secondHalf header nav ul li {
+        margin-right: 2rem; }
+  body #fullBody .bottomNav .navContainer {
+    height: 7%; }
+    body #fullBody .bottomNav .navContainer ul li {
+      font-size: 1.1rem; }
+      body #fullBody .bottomNav .navContainer ul li img {
+        width: 2rem;
+        margin-right: .5rem; }
+      body #fullBody .bottomNav .navContainer ul li button {
+        height: 5%; } }
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+@media only screen and (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+    font-size: 1.5rem;
+    width: 30%; }
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+    font-size: 1rem;
+    padding: .7rem; }
+  body #fullBody .secondHalf {
+    background: url("../imgs/fiveGuysMainPic.jpeg") 30%/120% 100% no-repeat; }
+    body #fullBody .secondHalf header nav {
+      margin-left: 1rem; }
+      body #fullBody .secondHalf header nav ul li {
+        margin-right: 2rem; }
+  body #fullBody .bottomNav .navContainer {
+    height: 7%; }
+    body #fullBody .bottomNav .navContainer ul li {
+      font-size: 1.1rem; }
+      body #fullBody .bottomNav .navContainer ul li img {
+        width: 2rem;
+        margin-right: .5rem; }
+      body #fullBody .bottomNav .navContainer ul li button {
+        height: 5%; } }
+
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  body #fullBody {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-rows: 50% 50%;
+    overflow-y: hidden; }
+    body #fullBody .firstHalf {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      height: 50%; }
+      body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+        font-size: 1.2rem;
+        width: 25%;
+        height: 10vh;
+        display: none; }
+      body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer {
+        height: 45vh; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+          font-size: 3rem; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+          display: none; }
+    body #fullBody .secondHalf {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 2;
+      width: 100%;
+      height: 100%;
+      background: url("../imgs/fiveGuysMainPic.jpeg") 5% 50%/cover no-repeat; }
+      body #fullBody .secondHalf header nav {
+        margin-left: 1rem; }
+        body #fullBody .secondHalf header nav .cornerLogoTwo {
+          background: white;
+          color: #cf092b;
+          width: 23%;
+          height: 10vh;
+          font-size: 2.7rem;
+          font-weight: 900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          font-family: "Playfair Display";
+          margin-left: -3.4rem; }
+        body #fullBody .secondHalf header nav ul li {
+          margin-right: 2rem; }
+    body #fullBody .bottomNav .navContainer {
+      height: 7%;
+      background: transparent;
+      box-shadow: none; }
+      body #fullBody .bottomNav .navContainer ul {
+        justify-content: center; }
+        body #fullBody .bottomNav .navContainer ul .bottomList {
+          display: none; }
+        body #fullBody .bottomNav .navContainer ul li img {
+          width: 2rem;
+          margin-right: .5rem; }
+        body #fullBody .bottomNav .navContainer ul li button {
+          height: 5%;
+          display: inline-block; } }
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+@media (min-width: 320px) and (max-width: 480px) {
+  body #fullBody {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-rows: 50% 50%;
+    overflow-y: hidden; }
+    body #fullBody .firstHalf {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      height: 50%; }
+      body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+        font-size: 1.2rem;
+        width: 25%;
+        height: 10vh;
+        display: none; }
+      body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer {
+        height: 45vh; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+          font-size: 3rem; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords p {
+          font-size: 1rem; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+          display: none; }
+    body #fullBody .secondHalf {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 2;
+      width: 100%;
+      height: 100%;
+      background: url("../imgs/fiveGuysMainPic.jpeg") 5% 50%/cover no-repeat; }
+      body #fullBody .secondHalf header nav {
+        margin-left: 1rem; }
+        body #fullBody .secondHalf header nav .cornerLogoTwo {
+          background: white;
+          color: #cf092b;
+          width: 23%;
+          height: 10vh;
+          font-size: 2.7rem;
+          font-weight: 900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          font-family: "Playfair Display";
+          margin-left: -3.4rem; }
+        body #fullBody .secondHalf header nav ul li {
+          margin-right: 1.5rem; }
+    body #fullBody .bottomNav .navContainer {
+      height: 7%;
+      background: transparent;
+      box-shadow: none; }
+      body #fullBody .bottomNav .navContainer ul {
+        justify-content: center; }
+        body #fullBody .bottomNav .navContainer ul .bottomList {
+          display: none; }
+        body #fullBody .bottomNav .navContainer ul li img {
+          width: 2rem;
+          margin-right: .5rem; }
+        body #fullBody .bottomNav .navContainer ul li button {
+          height: 5%;
+          display: inline-block; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 823px) and (-webkit-device-pixel-ratio: 3) and (orientation: landscape) {
+  body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+    font-size: 1.5rem;
+    width: 30%;
+    height: 30vh; }
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer {
+    height: 20vh;
+    padding-left: 8rem; }
+    body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+      font-size: 2rem; }
+    body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords p {
+      font-size: 1rem; }
+    body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+      display: none; }
+  body #fullBody .secondHalf {
+    background: url("../imgs/fiveGuysMainPic.jpeg") 30%/120% 100% no-repeat; }
+    body #fullBody .secondHalf header nav {
+      margin-left: 1rem; }
+      body #fullBody .secondHalf header nav ul li {
+        margin-right: 2rem; }
+  body #fullBody .bottomNav .navContainer {
+    height: 7%; }
+    body #fullBody .bottomNav .navContainer ul li {
+      font-size: 1.1rem; }
+      body #fullBody .bottomNav .navContainer ul li img {
+        width: 2rem;
+        margin-right: .5rem; }
+      body #fullBody .bottomNav .navContainer ul li button {
+        font-size: .8rem;
+        height: 8vh;
+        padding: .1rem; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 823px) and (orientation: landscape) {
+  body #fullBody {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-auto-columns: 1fr 1fr; }
+    body #fullBody .firstHalf {
+      grid-row: 1 / span 2;
+      grid-column: 1; }
+      body #fullBody .firstHalf .firstHalfContainer {
+        width: 100%;
+        height: 100vh; }
+        body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+          background: #cf092b;
+          color: white;
+          width: 18%;
+          height: 15vh;
+          font-size: 1rem;
+          font-weight: 900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          font-family: "Playfair Display"; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer {
+          width: 100%;
+          height: 70vh;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          align-items: center; }
+          body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+            font-size: 2rem; }
+          body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords p {
+            font-size: .8rem; }
+          body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+            font-size: 1rem;
+            padding: .7rem;
+            display: none; }
+    body #fullBody .secondHalf {
+      grid-column: 2;
+      background: url("../imgs/fiveGuysMainPic.jpeg") 30%/100% 170% no-repeat;
+      width: 100%;
+      height: 100vh; }
+      body #fullBody .secondHalf header nav {
+        margin-left: 1rem; }
+        body #fullBody .secondHalf header nav ul li {
+          font-size: .7rem;
+          margin-right: 1.5rem; }
+    body #fullBody .bottomNav .navContainer {
+      height: 7%;
+      background: transparent;
+      box-shadow: none; }
+      body #fullBody .bottomNav .navContainer ul {
+        justify-content: center; }
+        body #fullBody .bottomNav .navContainer ul .bottomList {
+          display: none; }
+        body #fullBody .bottomNav .navContainer ul li img {
+          width: 2rem;
+          margin-right: .5rem; }
+        body #fullBody .bottomNav .navContainer ul li button {
+          height: 5%;
+          display: inline-block; } }
+
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+    font-size: 2rem; }
+  body #fullBody .secondHalf header nav {
+    margin-left: 1rem; }
+    body #fullBody .secondHalf header nav ul li {
+      font-size: 1rem; }
+  body #fullBody .bottomNav .navContainer ul li img {
+    width: 3rem; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: landscape) {
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+    font-size: 1.5rem; }
+  body #fullBody .secondHalf header nav {
+    margin-left: 1rem; }
+    body #fullBody .secondHalf header nav ul li {
+      font-size: .7rem;
+      margin-right: 1rem; }
+  body #fullBody .bottomNav .navContainer ul li img {
+    width: 3rem; } }
+
+@media only screen and (min-device-width: 320px) and (max-device-width: 568px) and (orientation: portrait) {
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+    font-size: 1.5rem; }
+  body #fullBody .secondHalf header nav {
+    margin-left: 1rem; }
+    body #fullBody .secondHalf header nav ul li {
+      font-size: .7rem;
+      margin-right: 1rem; }
+  body #fullBody .bottomNav .navContainer ul li img {
+    width: 3rem; } }

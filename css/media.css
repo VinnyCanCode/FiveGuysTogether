@@ -1,0 +1,110 @@
+/*
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+/*
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+@media (min-width: 1025px) and (max-width: 1280px) {
+  body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+    font-size: 2rem; }
+  body .secondHalf header nav {
+    margin-left: 1rem; }
+  body .bottomNav .navContainer ul li img {
+    width: 3rem; } }
+
+/*
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+@media (min-width: 768px) and (max-width: 1024px) {
+  body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+    font-size: 1.5rem;
+    width: 30%; }
+  body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+    font-size: 1rem;
+    padding: .7rem; }
+  body #fullBody .secondHalf header nav {
+    margin-left: 1rem; }
+    body #fullBody .secondHalf header nav ul li {
+      margin-right: 2rem; }
+  body #fullBody .bottomNav .navContainer {
+    height: 7%; }
+    body #fullBody .bottomNav .navContainer ul li {
+      font-size: 1.1rem; }
+      body #fullBody .bottomNav .navContainer ul li img {
+        width: 2rem;
+        margin-right: .5rem; }
+      body #fullBody .bottomNav .navContainer ul li button {
+        height: 5%; } }
+
+/*
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+/*
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+@media (min-width: 481px) and (max-width: 767px) {
+  body #fullBody {
+    display: grid;
+    grid-auto-columns: 1fr 1fr;
+    grid-auto-rows: 50% 50%; }
+    body #fullBody .firstHalf {
+      grid-row: 2 / span 1;
+      grid-column: 1 / span 2;
+      height: 50%; }
+      body #fullBody .firstHalf .firstHalfContainer .cornerLogo {
+        font-size: 1.2rem;
+        width: 25%;
+        height: 10vh;
+        display: none; }
+      body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer {
+        height: 45vh; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer .centerWords h1 {
+          font-size: 3rem; }
+        body #fullBody .firstHalf .firstHalfContainer .centerWordsContainer button {
+          display: none; }
+    body #fullBody .secondHalf {
+      grid-row: 1 / span 1;
+      grid-column: 1 / span 2;
+      width: 100%;
+      height: 100%;
+      background: url("../imgs/fiveGuysMainPic.jpeg") 5% 50%/cover no-repeat; }
+      body #fullBody .secondHalf header nav {
+        margin-left: 1rem; }
+        body #fullBody .secondHalf header nav .cornerLogoTwo {
+          background: white;
+          color: white;
+          width: 18%;
+          height: 15vh;
+          font-size: 2.7rem;
+          font-weight: 900;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 1rem;
+          font-family: "Playfair Display"; }
+        body #fullBody .secondHalf header nav ul li {
+          margin-right: 2rem; }
+    body #fullBody .bottomNav .navContainer {
+      height: 7%;
+      background: transparent;
+      box-shadow: none; }
+      body #fullBody .bottomNav .navContainer ul {
+        justify-content: center; }
+        body #fullBody .bottomNav .navContainer ul .bottomList {
+          display: none; }
+        body #fullBody .bottomNav .navContainer ul li img {
+          width: 2rem;
+          margin-right: .5rem; }
+        body #fullBody .bottomNav .navContainer ul li button {
+          height: 5%;
+          display: inline-block; } }
+
+/*
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
